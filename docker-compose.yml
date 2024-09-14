@@ -1,0 +1,11 @@
+name: pocket-js-server-2
+
+services:
+  pg:
+    image: bitnami/postgresql:13.16.0
+    ports:
+      - '${DATABASE_PORT}:${DATABASE_PORT}'
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
